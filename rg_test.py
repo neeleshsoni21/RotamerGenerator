@@ -26,7 +26,7 @@ import rotamergenerator as rg
 args = rg.LoadArguments()
 rg_obj = rg.RotamerGenerator(args)
 
-'''
+
 #---------------------------
 # Run with command line arguments
 # USAGE: python rg_test.py -i ./rotamergenerator/data/toy_pep_long.pdb -l ./rotamergenerator/data/ALL.bbdep.rotamers.lib -k 50 -t 1.0 -o ./rotamergenerator/output/
@@ -51,6 +51,6 @@ output_dir='./rotamergenerator/output/'
 import rotamergenerator as rg
 args = rg.LoadArguments(input_pdb, input_lib, threshold, num_models, output_dir)
 rg_obj = rg.RotamerGenerator(args)
-'''
+
 
 
