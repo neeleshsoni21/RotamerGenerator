@@ -28,32 +28,25 @@ python
 >>> args = rg.LoadArguments()
 >>> rg_obj = rg.RotamerGenerator(args)
 ```
-### OR
-```bash
-python rg_test.py
-```
+
 
 ### Example Run to generate rotamer 100 models in the output directory from the input pdb (toy_pep_long.pdb) with a threshold probability of 1.0 
 
 
-### Run with command line arguments in python shell
+### Run with command line arguments. Save following lines in rg_test.py
 ```bash
-python
->>> import rotamergenerator as rg
->>> args = rg.LoadArguments()
->>> rg_obj = rg.RotamerGenerator(args)
+import rotamergenerator as rg
+args = rg.LoadArguments()
+rg_obj = rg.RotamerGenerator(args)
 ```
-### OR
+### Then execute following
 ```bash
 python rg_test.py -i ./rotamergenerator/data/toy_pep_long.pdb -l ./rotamergenerator/data/ALL.bbdep.rotamers.lib -k 100 -t 1.0 -o ./rotamergenerator/output/
 ```
 
 
-### ---------------------------
-### Run with input arguments
-### USAGE: python rg_test.py 
-### rg_test.py should contain the following lines
-### ---------------------------
+
+### Run with input arguments eithe rin python shell or from a python file
 ```bash
 python
 >>> input_pdb='./rotamergenerator/data/toy_pep_long.pdb'
