@@ -21,35 +21,33 @@ cd ../..
 python rg_test.py -h
 ```
 
-### Example Run to generate rotamer 100 models in the output directory from the input pdb (toy_pep_long.pdb) with a threshold probability of 1.0 
-```bash
-python rg_test.py -i ./data/toy_pep_long.pdb -l ./data/ALL.bbdep.rotamers.lib -k 100 -t 1.0 -o ./output/
-```
-
-
-### ---------------------------
 ### Run with default arguments.
-### USAGE: python rg_test.py
-### rg_test.py should contain the following lines 
-### ---------------------------
 ```bash
 python
->>>import rotamergenerator as rg
->>>args = rg.LoadArguments()
->>>rg_obj = rg.RotamerGenerator(args)
+>>> import rotamergenerator as rg
+>>> args = rg.LoadArguments()
+>>> rg_obj = rg.RotamerGenerator(args)
+```
+### OR
+```bash
+python rg_test.py
 ```
 
-### ---------------------------
-### Run with command line arguments
-### USAGE: python rg_test.py -i ./rotamergenerator/data/toy_pep_long.pdb -l ./rotamergenerator/data/ALL.bbdep.rotamers.lib -k 50 -t 1.0 -o ./rotamergenerator/output/
-### rg_test.py should contain the following lines
-### ---------------------------
+### Example Run to generate rotamer 100 models in the output directory from the input pdb (toy_pep_long.pdb) with a threshold probability of 1.0 
+
+
+### Run with command line arguments in python shell
 ```bash
 python
->>>import rotamergenerator as rg
->>>args = rg.LoadArguments()
->>>rg_obj = rg.RotamerGenerator(args)
+>>> import rotamergenerator as rg
+>>> args = rg.LoadArguments()
+>>> rg_obj = rg.RotamerGenerator(args)
 ```
+### OR
+```bash
+python rg_test.py -i ./rotamergenerator/data/toy_pep_long.pdb -l ./rotamergenerator/data/ALL.bbdep.rotamers.lib -k 100 -t 1.0 -o ./rotamergenerator/output/
+```
+
 
 ### ---------------------------
 ### Run with input arguments
@@ -58,13 +56,13 @@ python
 ### ---------------------------
 ```bash
 python
->>>input_pdb='./rotamergenerator/data/toy_pep_long.pdb'
->>>input_lib='./rotamergenerator/data/ALL.bbdep.rotamers.lib'
->>>threshold=1.0
->>>num_models=10
->>>output_dir='./rotamergenerator/output/'
+>>> input_pdb='./rotamergenerator/data/toy_pep_long.pdb'
+>>> input_lib='./rotamergenerator/data/ALL.bbdep.rotamers.lib'
+>>> threshold=1.0
+>>> num_models=10
+>>> output_dir='./rotamergenerator/output/'
 
->>>import rotamergenerator as rg
->>>args = rg.LoadArguments(input_pdb, input_lib, threshold, num_models, output_dir)
->>>rg_obj = rg.RotamerGenerator(args)
+>>> import rotamergenerator as rg
+>>> args = rg.LoadArguments(input_pdb, input_lib, threshold, num_models, output_dir)
+>>> rg_obj = rg.RotamerGenerator(args)
 ```
