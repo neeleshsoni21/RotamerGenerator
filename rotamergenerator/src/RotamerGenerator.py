@@ -154,6 +154,8 @@ class RotamerGenerator():
         self.rc = IMP.rotamer.RotamerCalculator(rl)
         self.residue_rotamers = OrderedDict()
 
+        np.random.shuffle(self.h_residues)
+
         for h in self.h_residues:
             rd = IMP.atom.Residue(h)
             rr = self.rc.get_rotamer(rd, self.args.threshold)
