@@ -18,6 +18,14 @@
 ################################################################################
 
 import sys
+import os
+
+_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+sys.path.append(_ROOT)
+sys.path.append(_ROOT+'/src')
+sys.path.append(_ROOT+'/data')
+sys.path.append(_ROOT+'/output')
 
 sys.path.insert(1, './rotamergenerator')
 sys.path.insert(1, './rotamergenerator/src')
@@ -27,8 +35,6 @@ sys.path.insert(1, './rotamergenerator/output')
 from RotamerGenerator import RotamerGenerator
 from src.addoptions import LoadArguments
 
-import sys
-import os
 
-_ROOT = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(_ROOT)
+
+
